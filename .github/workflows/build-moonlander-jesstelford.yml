@@ -1,0 +1,16 @@
+# Copyright 2021 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Build moonlander for Jess Telford"
+on:
+    - workflow_dispatch
+jobs:
+    build:
+        uses: jesstelford/miryoku_qmk/.github/workflows/main.yml@miryoku
+        with:
+            keyboard: '["moonlander"]'
+            alphas: '["qwerty"]'
+            nav: '["default","vi"]'
+            clipboard: '["default"]'
+            layers: '["default","flip"]'
+            config: '["#define ORYX_CONFIGURATOR\n#define WEBUSB_ENABLE"]'
